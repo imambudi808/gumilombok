@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('wisata','WisataController@index')->middleware('api');
+Route::post('wisata','WisataController@insertWisata');
+Route::put('/wisata/{id}','WisataController@updateWisata');
+
+Route::delete('/wisata/{id}','WisataController@deleteWisata');
+
+Route::get('/email','EmailController@showForm');
+Route::post('/email','EmailController@sub');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
