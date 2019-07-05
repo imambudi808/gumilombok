@@ -27,3 +27,11 @@ Route::post('/email','EmailController@sub');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/api_user','ApiController@showUser');
+Route::get('/api_user_guzzle','ApiController@showUserGuzzle');
+
+Route::get('/translate','ApiController@translate');
+Route::post('/translate','ApiController@posttranslate');
+// Route::post('/translate','ApiController@posttranslate2');
+
